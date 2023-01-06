@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+    <meta charset="utf-8">
+<title>
+    SE 3316 Lab 1
+</title>
+<meta name = "description" content = "Search Pokedex for the first 20 Pokemon">
+<meta name = "author" content = "Thileepan Prabhakaran">
+<link rel = "stylesheet" href = "style.css">
+<script src="pokedex.js"></script>
+
+
+
+</head>
+<body>
+
+<h1>
+    Pokédex
+</h1>
+<div id = 'div1'>
+  <form onsubmit="getName()">
+    <input type="text" id = "searchByName" placeholder="Pokemon name..." onkeyup="searchByNamee()" name ="Pokemon name">
+    <button type="submit"><i class="name search"></i></button>
+  </form>
+  <form onsubmit="getNumber()">
+    <input type="text" id="searchByNumber" placeholder="Pokemon number..." onkeyup="searchByNumberr()" name="Pokemon number">
+    <button type="submit"><i class="number search"></i></button>
+  </form>
+</div>
+<div id ="div2">
+    
+</div>
+<div id="div3">
+<ul id = "myUL"> 
+    <li>
+        <img src = "pokemon/1.png" alt = "Bulbasaur" />
+        <p>
+            #001
+        </p>
+        <p>
+            Bulbasaur
+        </p>
+        <p>
+            Type: Grass | Poison
+        </p>
+        <p>
+            Evolves into Ivysaur
+        </p>
+    </li>
+    <li>
+        <img src = "pokemon/2.png" alt = "Ivysaur"/>
+        <p>
+            #002
+        </p>
+        <p>
+            Ivysaur
+        </p>
+        <p>
+            Type: Grass | Poison
+        </p>
+        <p>
+            Evolves into Venusaur
+        </p>
+    </li>
+    <li>
+        <img src = "pokemon/3.png" alt = "Venusaur"/>
+        <p>
+            #003
+        </p>
+        <p>
+            Venusaur
+        </p>
+        <p>
+            Type: Grass | Poison
+        </p>
+        <p>
+            Evolves into N/A
+        </p>
+    </li>
+    <li>
+        <img src = "pokemon/4.png" alt = "Charmander"/>
+        <p>
+            #004
+        </p>
+        <p>
+            Charmander
+        </p>
+        <p>
+            Type: Fire
+        </p>
+        <p>
+            Evolves into Charmeleon
+        </p>
+    </li>
+    <li>
+        <img src = "pokemon/5.png" alt = "Charmeleon"/>
+        <p>
+            #005
+        </p>
+        <p>
+            Charmeleon
+        </p>
+        <p>
+            Type: Fire
+        </p>
+        <p>
+            Evolves into Charmeleon
+        </p>
+    </li>
+    <li>
+        <img src = "pokemon/6.png" alt = "Charizard"/>
+        <p>
+            #006
+        </p>
+        <p>
+            Charizard
+        </p>
+        <p>
+            Type: Fire | Flying
+        </p>
+        <p>
+            Evolves into N/A
+        </p>
+    </li>
+    <li>
+        <img src = "pokemon/7.png" alt = "Squirtle"/>
+        <p>
+            #007
+        </p>
+        <p>
+            Squirtle
+        </p>
+        <p>
+            Type: Water
+        </p>
+        <p>
+            Evolves into Wortotle
+        </p>
+    </li>
+    <li>
+        <img src = "pokemon/8.png" alt = "Wartotle"/>
+        <p>
+            #008
+        </p>
+        <p>
+            Wortotle
+        </p>
+        <p>
+            Type: Water
+        </p>
+        <p>
+            Evolves into Blastoise
+        </p>
+    </li>
+    <li>
+        <img src = "pokemon/9.png" alt = "Blastoise"/>
+        <p>
+            #009
+        </p>
+        <p>
+            Blastoise
+        </p>
+        <p>
+            Type: Water
+        </p>
+        <p>
+            Evolves into N/A
+        </p>
+    </li>
+    <li>
+        <img src = "pokemon/10.png" alt = "Caterpie"/>
+        <p>
+            #010
+        </p>
+        <p>
+            Caterpie
+        </p>
+        <p>
+            Type: Bug
+        </p>
+        <p>
+            Evolves into Metapod
+        </p>
+    </li>
+    <li>
+        <img src = "pokemon/11.png" alt = "Metapod"/>
+        <p>
+            #011
+        </p>
+        <p>
+            Metapod
+        </p>
+        <p>
+            Type: Bug
+        </p>
+        <p>
+            Evolves into Butterfree
+        </p>
+    </li>
+    <li>
+        <img src = "pokemon/12.png" alt = "Butterfree"/>
+        <p>
+            #012
+        </p>
+        <p>
+            Butterfree
+        </p>
+        <p>
+            Type: Bug | Flying
+        </p>
+        <p>
+            Evolves into N/A
+        </p>
+    </li>
+    <li>
+        <img src = "pokemon/13.png" alt = "Weedle"/>
+        <p>
+            #013
+        </p>
+        <p>
+            Weedle
+        </p>
+        <p>
+            Type: Bug | Poison
+        </p>
+        <p>
+            Evolves into Kakuna
+        </p>
+    </li>
+    <li>
+        <img src = "pokemon/14.png" alt = "Kakuna"/>
+        <p>
+            #014
+        </p>
+        <p>
+            Kakuna
+        </p>
+        <p>
+            Type: Bug | Poison
+        </p>
+        <p>
+            Evolves into Beedrill
+        </p>
+    </li>
+    <li>
+        <img src = "pokemon/15.png" alt = "Beedrill"/>
+        <p>
+            #015
+        </p>
+        <p>
+            Beedrill
+        </p>
+        <p>
+            Type: Bug | Poison
+        </p>
+        <p>
+            Evolves into N/A
+        </p>
+    </li>
+    <li>
+        <img src = "pokemon/16.png" alt = "Pidgey"/>
+        <p>
+            #016
+        </p>
+        <p>
+            Pidgey
+        </p>
+        <p>
+            Type: Normal | Flying
+        </p>
+        <p>
+            Evolves into Pidgeotto
+        </p>
+    </li>
+    <li>
+        <img src = "pokemon/17.png" alt = "Pidgeotto"/>
+        <p>
+            #017
+        </p>
+        <p>
+            Pidgeotto
+        </p>
+        <p>
+            Type: Normal | Flying
+        </p>
+        <p>
+            Evolves into Pidgeot
+        </p>
+    </li>
+    <li>
+        <img src = "pokemon/18.png" alt = "Pidgeot"/>
+        <p>
+            #018
+        </p>
+        <p>
+            Pidgeot
+        </p>
+        <p>
+            Type: Normal | Flying
+        </p>
+        <p>
+            Evolves into N/A
+        </p>
+    </li>
+    <li>
+        <img src = "pokemon/19.png" alt = "Rattata"/>
+        <p>
+            #019
+        </p>
+        <p>
+            Rattata
+        </p>
+        <p>
+            Type: Normal 
+        </p>
+        <p>
+            Evolves into Raticate
+        </p>
+    </li>
+    <li>
+        <img src = "pokemon/20.png" alt = "Raticate"/>
+        <p>
+            #020
+        </p>
+        <p>
+            Raticate
+        </p>
+        <p>
+            Type: Normal
+        </p>
+        <p>
+            Evolves into N/A
+        </p>
+    </li>
+</ul>
+</div>
+<div id = "end">
+    <h2> 
+        References:
+    </h2>
+    <p>
+        https://www.pokemon.com/us/pokedex/
+    </p>
+    <p>
+        https://www.reddit.com/r/TheSilphRoad/comments/7p952h/pokemon_go_pokedex_spreadsheet/ 
+    </p>
+    <p>
+        Lab1-pokemon-data.csv
+    </p>
+
+</div>
+</body>
+
+
+
+</html>

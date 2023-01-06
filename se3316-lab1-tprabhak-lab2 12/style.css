@@ -1,0 +1,31 @@
+body {
+    background-color:rgb(43, 211, 211);
+}
+
+h1 {
+    color: gray;
+    font-weight: normal;
+    font-size: 40;
+}
+
+ul {
+    list-style-type: none; /* remove bullets*/
+    padding: 20px;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 250px 250px 250px 250px;
+    grid-gap: 60px;
+}
+
+li {
+
+border-radius: 40px;
+background-color: rgb(45, 149, 59);
+align-items:flex-start;
+flex-direction: column;
+}
+
+
+div#div2{
+    background-color: pink;
+}
